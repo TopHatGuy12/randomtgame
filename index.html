@@ -30,7 +30,7 @@
         <script>
         function getRndInteger(min, max) {
         var number = Math.floor(Math.random() * (max - min)) + min;
-        var peopleNumber = Integer.valueof(document.getElementsByName('peopleNumber')[0].value);
+        var peopleNumber = parseInt(document.getElementsByName('peopleNumber')[0].value);
         document.getElementsByName('peopleNumber')[0].value = ""
 
         if (isNaN(peopleNumber - 1)) {
