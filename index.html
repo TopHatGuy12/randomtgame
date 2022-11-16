@@ -29,13 +29,10 @@
 
         <script>
         function getRndInteger(min, max) {
-        var number = Math.floor(Math.random() * (max - min)) + min;
-        var peopleNumber = parseInt(document.getElementsByName('peopleNumber')[0].value);
-        document.getElementsByName('peopleNumber')[0].value = ""
-
-        if (isNaN(peopleNumber - 1)) {
-            return "Use a Number."
-        } else {
+            var number = Math.floor(Math.random() * (max - min)) + min;
+            if (!(parseInt(document.getElementsByName('peopleNumber')[0].value).toString()===document.getElementsByName('peopleNumber')[0].value)) {break;}
+            var peopleNumber = parseInt(document.getElementsByName('peopleNumber')[0].value);
+            document.getElementsByName('peopleNumber')[0].value = ""
             const magicGames = ["Standard", "Random Standard", "Commander", "Random Commander", "Team Commander"];
             if (number == 0) {
                 return magicGames[0]
@@ -47,7 +44,7 @@
                 return magicGames[3]
             } else if (number == 4) {
                 return magicGames[4]
-            }        }
+            }        
         }
         </script>                    
     </body>
