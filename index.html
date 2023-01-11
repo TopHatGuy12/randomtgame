@@ -18,15 +18,24 @@
     </head>
 
     <body>
-        <form>
-            <label for="peopleNumber">How many people?</label> <br>
-            <input type="text" id="peopleNumber" name="peopleNumber"> <br>
-        </form>
-        <button onclick="document.getElementById('demo').innerHTML = getRndInteger(0,5)">Decide</button>
+        <div class='nav'>
+            
+        </div>
+        
+        <div class='main'>
+            <form>
+                <label for="peopleNumber">How many people?</label> <br>
+                <input type="text" id="peopleNumber" name="peopleNumber"> <br>
+            </form>
+            <button onclick="document.getElementById('demo').innerHTML = getRndInteger(0,5)">Decide</button>
 
-        <p id="demo"></p>
-        <p id='moreInfo'></p>
-
+            <p id="demo"></p>
+            <p id='moreInfo'></p>
+        </div>
+        
+        <div class='footer'>
+            
+        </div>
         <script>
         function getRndInteger(min, max) {
             var number = Math.floor(Math.random() * max);
