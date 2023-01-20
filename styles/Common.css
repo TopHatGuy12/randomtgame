@@ -10,11 +10,9 @@ form {
     margin: 20px;
 }
 
-div.main {
-    background-image: url("/mtgPlaneswalkers.jpeg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+body {
+    background-color: blanchedalmond
+
 }
 
 label {
@@ -33,7 +31,7 @@ input[type="text"] {
 
 /* Style the button */
 button {
-    background-color: #4CAF50;
+    background-color: #957d74;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -55,8 +53,15 @@ button:hover {
 
 /* Style the "nav" and "footer" divs */
 .nav, .footer {
-    background-color: #f2f2f2;
+    background-color: #A33B;
     height: 50px;
     text-align: center;
     line-height: 50px;
+}
+
+.footer {
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:50px;
 }
