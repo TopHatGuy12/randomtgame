@@ -1,6 +1,6 @@
 /* Add some basic styling to the page */
 body {
-    background-image: url("/../mtgPlaneswalkers.jpeg");
+    background-image: url("/mtgPlaneswalkers.jpeg");
     background-repeat: no-repeat;
     background-attachment: fixed;  
     background-size: cover;
