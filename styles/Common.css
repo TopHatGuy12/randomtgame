@@ -10,7 +10,7 @@ form {
     margin: 20px;
 }
 
-.main {
+div.nav {
     background-image: url("/mtgPlaneswalkers.jpeg");
     background-repeat: no-repeat;
     background-attachment: fixed;  
