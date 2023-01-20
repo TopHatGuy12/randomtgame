@@ -37,27 +37,29 @@
             
         </div>
         <script>
-        function getRndInteger(min, max) {
-            var number = Math.floor(Math.random() * max);
-            if (!(parseInt(document.getElementsByName('peopleNumber')[0].value).toString()===document.getElementsByName('peopleNumber')[0].value)) {
+            function getRndInteger(min, max) {
+                var number = Math.floor(Math.random() * max);
                 var peopleNumber = parseInt(document.getElementsByName('peopleNumber')[0].value);
-                document.getElementsByName('peopleNumber')[0].value = ""
-                const magicGames = ["Standard", "Random Standard", "Commander", "Random Commander", "Team Commander"];
-                if (number == 0) {
-                    document.getElementById('demo').innerHTML = magicGames[0]
-                } else if (number == 1) {
-                    document.getElementById('demo').innerHTML = magicGames[1]
-                } else if (number == 2) {
-                    document.getElementById('demo').innerHTML = magicGames[2]
-                } else if (number == 3) {
-                    document.getElementById('demo').innerHTML = magicGames[3]
-                } else if (number == 4) {
-                    document.getElementById('demo').innerHTML = magicGames[4]
+                if (!(parseInt(peopleNumber).toString() === peopleNumber)) {
+                    // code to handle invalid peopleNumber
                 } else {
-                    document.getElementById('demo').innerHTML = "Test"
+                    document.getElementsByName('peopleNumber')[0].value = ""
+                    const magicGames = ["Standard", "Random Standard", "Commander", "Random Commanders", "Team Commanders"];
+                    if (number == 0) {
+                        document.getElementById('demo').innerHTML = magicGames[0]
+                    } else if (number == 1) {
+                        document.getElementById('demo').innerHTML = magicGames[1]
+                    } else if (number == 2) {
+                        document.getElementById('demo').innerHTML = magicGames[2]
+                    } else if (number == 3) {
+                        document.getElementById('demo').innerHTML = magicGames[3]
+                    } else if (number == 4) {
+                        document.getElementById('demo').innerHTML = magicGames[4]
+                    } else {
+                        document.getElementById('demo').innerHTML = "Test"
+                    }
                 }
             }
-        }
         </script>                    
     </body>
 </html>
