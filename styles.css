@@ -1,0 +1,55 @@
+/* Add some basic styling to the page */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the form and input field */
+form {
+    margin: 20px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+}
+
+input[type="text"] {
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Style the button */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Style the "demo" and "moreInfo" paragraphs */
+#demo, #moreInfo {
+    margin: 20px;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+/* Style the "nav" and "footer" divs */
+.nav, .footer {
+    background-color: #f2f2f2;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
