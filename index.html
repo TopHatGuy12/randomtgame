@@ -25,6 +25,7 @@
             function getRndInteger(min, max) {
                 var peopleNumber = document.getElementsByName('peopleNumber')[0].value;
                 if (isNaN(peopleNumber) || peopleNumber === "") {
+                    document.getElementsByName('peopleNumber')[0].value = ""
                     document.getElementById('demo').innerHTML = "Please enter a valid number";
                 } else {
                     document.getElementsByName('peopleNumber')[0].value = ""
@@ -46,7 +47,7 @@
                 }
             }
         const button = document.querySelector("#decide");
-        button.addEventListener("click", () => { getRndInteger(0,5); }); 
+        button.addEventListener("click", () => { getRndInteger(0,4); }); 
     </script>   
 
     
