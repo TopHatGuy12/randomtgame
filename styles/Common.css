@@ -10,11 +10,11 @@ form {
     margin: 20px;
 }
 
-div.nav {
+div.main {
     background-image: url("/mtgPlaneswalkers.jpeg");
+    background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;  
-    background-size: cover;
+    background-attachment: fixed;
 }
 
 label {
