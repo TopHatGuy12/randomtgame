@@ -1,49 +1,34 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="uft-8">
+<html><head>
+        <meta charset="utf-8">
         <title>randoMTGame</title>
         <link rel="icon" type="image/x-icon" href="MysteryMythic.png">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" 
-    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-    crossorigin="anonymous"
-    />    
-    <link rel="stylesheet" href="styles/Common.css">
-
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&amp;display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&amp;display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&amp;display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">    
+        <link rel="stylesheet" href="styles/Common.css">
     </head>
-
     <body>
-        <div class='nav'>
-            
-        </div>
-        
-        <div class='main'>
+        <div class="nav"></div>
+        <div class="main">
             <form>
                 <label for="peopleNumber">How many people?</label> <br>
                 <input type="text" id="peopleNumber" name="peopleNumber"> <br>
             </form>
-            <button onclick="getRndInteger(0,5)">Decide</button>
-
+            <button id="decide">Decide</button>
             <p id="demo"></p>
-            <p id='moreInfo'></p>
+            <p id="moreInfo"></p>
         </div>
-        
-        <div class='footer'>
-            
-        </div>
-        <script>
+        <div class="footer"></div>
+    <script>
             function getRndInteger(min, max) {
-                var number = Math.floor(Math.random() * max);
-                var peopleNumber = parseInt(document.getElementsByName('peopleNumber')[0].value);
-                if (!(parseInt(peopleNumber).toString() === peopleNumber)) {
-                    // code to handle invalid peopleNumber
+                var peopleNumber = document.getElementsByName('peopleNumber')[0].value;
+                if (isNaN(peopleNumber) || peopleNumber === "") {
+                    document.getElementById('demo').innerHTML = "Please enter a valid number";
                 } else {
                     document.getElementsByName('peopleNumber')[0].value = ""
+                    var number = Math.floor(Math.random() * (max - min + 1)) + min;
                     const magicGames = ["Standard", "Random Standard", "Commander", "Random Commanders", "Team Commanders"];
                     if (number == 0) {
                         document.getElementById('demo').innerHTML = magicGames[0]
@@ -60,6 +45,10 @@
                     }
                 }
             }
-        </script>                    
-    </body>
-</html>
+        const button = document.querySelector("#decide");
+        button.addEventListener("click", () => { getRndInteger(0,5); }); 
+    </script>   
+
+    
+
+</body></html>
