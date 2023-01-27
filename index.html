@@ -29,23 +29,36 @@
                     document.getElementById('demo').innerHTML = "Please enter a valid number";
                 } else {
 
+                    
                     if (parseInt(peopleNumber) == 1) {
                     	document.getElementsByName('peopleNumber')[0].value = ""
                         document.getElementById('demo').innerHTML = "Solitare";
-                    } else if (parseInt(peopleNumber) <= 0) {
+                    } else if (parseInt(peopleNumber) < 2) {
                     	document.getElementsByName('peopleNumber')[0].value = ""
-                        document.getElementById('demo').innerHTML = "Use a positive number";
+                        document.getElementById('demo').innerHTML = "Use a positive number greater than or equal to 2";
                     } else {
                         document.getElementsByName('peopleNumber')[0].value = ""
                         const magicGames = [];
                         if (parseInt(peopleNumber) >= 2) {
-                        	magicGames.push('Standard', 'Random Standard')
+                        	magicGames.push('Standard', 'Random Standard', 'Chaos Deck')
                         }
                         if (parseInt(peopleNumber) >= 3) {
-                        	magicGames.push('Commander', 'Random Commander')
+                        	magicGames.push('Commander', 'Random Commanders', 'Archenemy',)
                         }
-                        if (parseInt(peopleNumber) > 2 && parseInt(peopleNumber) % 2 == 0) {
-                        	magicGames.push('Team Standard')
+                        if (parseInt(peopleNumber) >= 4 && parseInt(peopleNumber) % 2 == 0) {
+                        	magicGames.push('Team Standard', 'Team Commanders', 'Two Headed Giant', 'Commander Archenemy')
+                        }
+                        if (parseInt(peopleNumber) >= 6 && parseInt(peopleNumber) % 3 == 0) {
+                        	magicGames.push('Emperor-General')
+                        }
+                        if (parseInt(peopleNumber) >= 5) {
+                        	magicGames.push('Bang!', 'Star')
+                        }
+                        if (parseInt(peopleNumber) >= 6) {
+                        	magicGames.push('Hidden Ally')
+                        }
+                        if (parseInt(peopleNumber) >= 4) {
+                        	magicGames.push('Horde')
                         }
                          
                         
